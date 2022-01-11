@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alex Assistant</title>
+
+    <!-- Nunito Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+
+    <link rel="icon" href="../assets/favIcon.png">
+
+</head>
+
+<body class="home">
+    <header>
+        <div class="logo">
+            <img src="../assets/Logo_alex.png" alt="">
+        </div>
+    </header>
+
+    <main class="steps-container">
+        <div class="one-step step" data-name="home">
+
+            <section class="title-container">
+                <p class="title"> <span class="emoji">👋</span> Hi, I'm <strong class="strong">Alex</strong>, your
+                    assistant. </p>
+                <p class="title second"> What do you
+                    want to calculate today? <img class="icon robot" src="../assets/asistente-de-robot.png" alt=""> </p>
+            </section>
+            <section class="main-options">
+                <div class="main-action" data-action="geometry">
+
+                    <img class="icon" src="../assets/shapes.png" alt="">
+                    <p>Geometry</p>
+
+                </div>
+                <div class="main-action" data-action="Discounts">
+
+                    <p>Discounts</p>
+
+
+                </div>
+                <div class="main-action" data-action="statistics">
+
+                    <p>Statistics</p>
+
+                </div>
+                <div class="main-action" data-action="Analysis">
+
+                    <p>Analysis</p>
+
+                </div>
+            </section>
+
+        </div>
+
+        <div class="two-step step geometry disable" data-name="geometry">
+            <template id="optionTemplate">
+                <section class="section-container option">
+                    <article class="option">
+                        <h2 class="title"> <img class="img" src="" alt=""></h2>
+                    </article>
+                    <form>
+                        <label class="labelInput" for="">Enter how long each side of your square is</label>
+                        <input class="input" type="number" id="SquareInputLong">
+                        <select class="select" name="measure" id="SquareSelect">
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                            <option value="mm">mm</option>
+
+                        </select>
+
+                        <button class="Btn-Perimeter" type="button">
+                            Calculate Perimeter
+                        </button>
+                        <button class="btn-Area" type="button">
+                            Calculate Area
+                        </button>
+                    </form>
+                </section>
+            </template>
+        </div>
+
+        <div class="control-container">
+            <aside class="action-container">
+
+                <button class="btn secondary back-step">
+                    <span class="iconify" data-icon="eva:arrow-ios-back-fill"></span>
+                    Back
+
+                </button>
+
+                <button class="btn primary Next-two-step">Next step <span class="iconify"
+                        data-icon="ic:round-navigate-next"></span> </button>
+                <!-- Active y disable -->
+            </aside>
+        </div>
+
+
+
+    </main>
+
+
+
+
+</body>
+<script src="./js/script.js"></script>
+
+</html>

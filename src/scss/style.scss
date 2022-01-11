@@ -1,0 +1,234 @@
+$background:#f5f5f5;
+$blue-primary: #4674Ea;
+$blue-light: #90ACF2;
+$blue-extra-ligth:#DAE3FB;
+$red: #F96868;
+$green: #4FDA9f;
+$white: #ffffff;
+$gray: #b4b5c6;
+$black: #323232;
+
+$nunito:'Nunito',
+sans-serif;
+
+* {
+    margin: 0;
+    font-family: $nunito;
+    padding: 0;
+
+}
+
+body {
+    background: $background;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 17px;
+    text-align: left;
+    color: $black;
+}
+
+strong {
+    color: $blue-primary;
+}
+
+
+
+.emoji {
+    font-weight: 500;
+}
+
+.logo {
+    text-align: center;
+    margin-top: 50px;
+
+    img {
+        width: 200px;
+        justify-self: center;
+        cursor: pointer;
+
+    }
+}
+
+.title-container {
+    max-width: 90%;
+    margin: auto;
+    margin: 18vw 24px 10vw;
+
+
+    .second {
+        text-align: justify;
+        display: flex;
+        align-items: center;
+        font-size: 15px;
+        gap: 4px;
+        margin-top: -5px;
+
+        .icon {
+            width: 38px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    }
+}
+
+.icon {
+    width: 38px;
+    cursor: pointer;
+}
+
+.main-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin: 0px 24px;
+
+    .main-action {
+        cursor: pointer;
+        width: 25%;
+        min-width: 150px;
+        flex: 1;
+        background: $blue-extra-ligth;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 7px;
+        border-radius: 8px;
+        box-shadow: 1px 4px 8px 1px #9da3bd42;
+        transition: all 0.3s ease;
+
+
+        &:hover {
+            background: $blue-primary;
+
+            p {
+                color: #fff;
+            }
+        }
+
+        &.active {
+            min-width: 100%;
+            background: $blue-primary;
+
+            p {
+                color: #fff;
+                font-size: 20px;
+            }
+        }
+
+        p {
+            font-size: 18px;
+            font-weight: 600;
+            color: $black;
+            transition: color 0.3s ease;
+
+        }
+    }
+}
+
+.action-container {
+    position: fixed;
+    bottom: 0;
+    background: $white;
+    box-shadow: 0px -10px 50px rgba(80, 80, 80, 0.20);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 20px 30px;
+    width: calc(100% - 60px);
+    gap: 30px;
+    
+
+    .btn.primary {
+        display: flex;
+        align-items: center;
+        border-radius: 8px;
+        border: none;
+        justify-content: center;
+        flex: 1;
+        background: $blue-extra-ligth;
+        transition: all 0.3s ease-in-out;
+        cursor: no-drop;
+        position: relative;
+
+        &.active {
+            background: $blue-primary;
+            color: $white;
+            cursor: pointer;
+            font-weight: 700;
+
+            svg {
+               
+                animation: centerToRigthBtn 1s ease-in-out forwards;
+            }
+
+        }
+
+        svg {
+            font-size: 38px;
+        }
+    }
+
+    .btn.secondary.back-step{
+        @extend .btn.primary;
+        background: $red;
+        color: #fff;
+        max-width: 20%;
+        min-width: 110px;
+        cursor: pointer;
+
+        svg{
+            font-size: 30px;
+        }
+    }
+}
+
+.step.disable{
+    display: none;
+}
+
+.step.active{
+    display: block;
+}
+
+.home{
+    .action-container > .btn.secondary.back-step{
+        min-width: 0;
+        flex: 0;
+        position: absolute;
+    }
+}
+
+.option{
+    padding: 20px;
+    background: #4674Ea;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 4px 8px 1px #9da3bd42;
+    h2{
+        color: #fff;
+        text-shadow: 4px 4px 5px rgba(27, 27, 27, 0.253);
+        font-size: 32px;
+        
+    }
+    img{
+        width: 50px;
+    }
+}
+
+
+
+
+@keyframes centerToRigthBtn{
+    0%{
+        transform: translateX(0);
+    }
+
+    100%{
+        transform: translateX(100%);
+       
+    }
+    
+}
