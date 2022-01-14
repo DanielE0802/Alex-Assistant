@@ -67,30 +67,100 @@
         </div>
 
         <div class="two-step step geometry disable" data-name="geometry">
-            <template id="optionTemplate">
-                <section class="section-container option">
-                    <article class="option">
-                        <h2 class="title"> <img class="img" src="" alt=""></h2>
-                    </article>
-                    <form>
-                        <label class="labelInput" for="">Enter how long each side of your square is</label>
-                        <input class="input" type="number" id="SquareInputLong">
-                        <select class="select" name="measure" id="SquareSelect">
-                            <option value="cm">cm</option>
-                            <option value="m">m</option>
-                            <option value="mm">mm</option>
 
-                        </select>
+            <!-- Square section init -->
 
-                        <button class="Btn-Perimeter" type="button">
-                            Calculate Perimeter
-                        </button>
-                        <button class="btn-Area" type="button">
-                            Calculate Area
-                        </button>
-                    </form>
-                </section>
-            </template>
+            <section class="section-container option">
+                <article>
+                    <h2 class="title"> Square <img class="img" src="/assets/cube.png" alt=""></h2>
+                </article>
+                <form>
+                    <label class="labelInput" for="SquareInputLong">Enter how long each side of your square is</label>
+                    <input class="input" type="number" id="SquareInputLong" />
+                    <select class="select" name="measure" id="SquareSelect">
+                        <option value="cm">cm</option>
+                        <option value="m">m</option>
+                        <option value="mm">mm</option>
+                    </select>
+
+                    <div id="resultSquare"></div>
+
+                    <button class="Btn-Perimeter" onclick="perimeterSquare()" type="button">
+                        Calculate Perimeter
+                    </button>
+                    <button class="btn-Area" onclick="areaSquare()" type="button">
+                        Calculate Area
+                    </button>
+                </form>
+            </section>
+
+            <!-- Square section finish -->
+
+            <!-- Rectangle section init -->
+
+            <section class="section-container option">
+                <article>
+                    <h2 class="title"> Rectangle <img class="img" src="/assets/rectangle.png" alt=""></h2>
+                </article>
+                <form>
+                    <label class="labelInput" for="RectangleInputLong">enter side A</label>
+                    <input class="input RectangleInputLong" type="number" />
+                    <select class="select" name="measure" id="rectangleSelect">
+                        <option value="cm">cm</option>
+                        <option value="m">m</option>
+                        <option value="mm">mm</option>
+                    </select>
+
+                    <label class="labelInput" for="RectangleInputLong">enter side B</label>
+                    <input class="input RectangleInputLong" type="number" />
+                    <select class="select" name="measure" id="rectangleSelect">
+                        <option value="cm">cm</option>
+                        <option value="m">m</option>
+                        <option value="mm">mm</option>
+                    </select>
+
+                    <div id="resultRectangle"></div>
+
+                    <button class="Btn-Perimeter" onclick="perimeterRectangle()" type="button">
+                        Calculate Perimeter
+                    </button>
+                    <button class="btn-Area" onclick="areaRectangle()" type="button">
+                        Calculate Area
+                    </button>
+                </form>
+            </section>
+
+            <!-- Rectangle section finish -->
+
+            <!-- Triangle section init -->
+
+
+            <section class="section-container option">
+                <article>
+                    <h2 class="title"> Triangle <img class="img" src="/assets/pyramid.png" alt=""></h2>
+                </article>
+                <form>
+                    <label class="labelInput" for="SquareInputLong">Enter how long each side of your square is</label>
+                    <input class="input" type="number" id="SquareInputLong" />
+                    <select class="select" name="measure" id="SquareSelect">
+                        <option value="cm">cm</option>
+                        <option value="m">m</option>
+                        <option value="mm">mm</option>
+                    </select>
+
+                    <div id="resultSquare"></div>
+
+                    <button class="Btn-Perimeter" onclick="perimeterSquare()" type="button">
+                        Calculate Perimeter
+                    </button>
+                    <button class="btn-Area" onclick="areaSquare()" type="button">
+                        Calculate Area
+                    </button>
+                </form>
+            </section>
+
+            <!-- Triangle section finish -->
+
         </div>
 
         <div class="control-container">
@@ -117,5 +187,7 @@
 
 </body>
 <script src="./js/script.js"></script>
+<script src="./js/calculos.js"></script>
+
 
 </html>

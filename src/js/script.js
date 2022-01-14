@@ -1,7 +1,7 @@
 // One Step Event
 
 let OneStepEvent = document.querySelectorAll(".main-action")
-let templateOption = document.getElementById("optionTemplate").content
+// let templateOption = document.getElementById("optionTemplate").content
 
 OneStepEvent.forEach(element => {
     console.log(element.dataset.action)
@@ -59,24 +59,28 @@ function nextStep(currentStep, nextStep) {
 }
 
 function stepGeometry() {
-    let dataStep = [{
-            "nombre":"Square"
-        },
-        {
-            "nombre": "Rectangulo"
-        }
-    ]
+    // let dataStep = [{
+    //         "nombre":"Square"
+    //     },
+    //     {
+    //         "nombre": "Rectangulo"
+    //     }
+    // ]
  
     let geometryContainer = document.querySelector(".two-step.geometry")
 
-    dataStep.forEach(element => {
-        templateOption.querySelector(".title").textContent = element.nombre
-        let prueba = templateOption.cloneNode(true)
-        geometryContainer.appendChild(prueba)
+    // dataStep.forEach(element => {
+    //     templateOption.querySelector(".title").textContent = element.nombre
+    //     let prueba = templateOption.cloneNode(true)
+    //     geometryContainer.appendChild(prueba)
 
-    });
+    // });
 
     console.log(geometryContainer)
 }
 
 console.log(stepContainer)
+
+
+
+
