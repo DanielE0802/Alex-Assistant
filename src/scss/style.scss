@@ -1,4 +1,4 @@
-$background:#f5f5f5;
+$background:#f5f5f573;
 $blue-primary: #4674Ea;
 $blue-light: #90ACF2;
 $blue-extra-ligth:#DAE3FB;
@@ -49,6 +49,14 @@ strong {
         cursor: pointer;
 
     }
+}
+
+.disable{
+    display: none;
+}
+
+.active{
+    display: block;
 }
 
 .title-container {

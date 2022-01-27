@@ -46,10 +46,10 @@
                     <p>Geometry</p>
 
                 </div>
-                <div class="main-action" data-action="Discounts">
+                <div class="main-action" data-action="discounts">
 
+                    <img class="icon" src="../assets/discount.png" alt="">
                     <p>Discounts</p>
-
 
                 </div>
                 <div class="main-action" data-action="statistics">
@@ -65,6 +65,8 @@
             </section>
 
         </div>
+
+        <!-- Geometry section init -->
 
         <div class="two-step step geometry disable" data-name="geometry">
 
@@ -163,6 +165,58 @@
 
         </div>
 
+        <!-- Geometry section finish -->
+
+        <!-- Discount section init -->
+
+        
+        <div class="two-step step discounts disable" data-name="discounts">
+
+            <!-- Discounts section init -->
+
+            <section class="section-container option">
+                <article>
+                    <h2 class="title"> Discounts <img class="img" src="/assets/discount.png" alt=""></h2>
+                </article>
+
+                <form >
+                    <button class="btn primary" id="notCoupon" data-action="notCoupon" type="button"> have a coupon</button>
+                    <button class="btn primary" id="haveCoupon" data-action="haveCoupon" type="button"> don't have a coupon</button>
+
+                </form>
+
+                <form class="notCoupon disable" data-name="notCoupon">
+                    <label class="labelInput" for="productValue">Enter the value of your product</label>
+                    <input class="input" type="number" id="productValue" />
+                    <label class="labelInput" for="productDiscount">Enter the value of your discount</label>
+                    <input class="input" type="number" id="productDiscount" />
+
+                    <div id="resultSquare"></div>
+
+                    <button class="Btn-Perimeter" onclick="perimeterSquare()" type="button">
+                        
+                    </button>
+                </form>
+
+                <form class="haveCoupon disable" data-name="haveCoupon">
+                    <label class="labelInput" for="productValueCoupon">Enter the value of your product</label>
+                    <input class="input" type="number" id="productValueCoupon" />
+                    <label class="labelInput" for="productDiscount">Enter your coupon</label>
+                    <input class="input" type="text" id="nameOfCoupon" />
+
+                    <div id="resultProductValueCoupon"></div>
+
+                    <button class="Btn-Perimeter" onclick="applyDiscountHaveCoupon()" type="button">
+                        Calculate Perimeter
+                    </button>
+                </form>
+            </section>
+
+        </div>
+
+        <!-- Discount section finish -->
+
+
         <div class="control-container">
             <aside class="action-container">
 
@@ -188,6 +242,6 @@
 </body>
 <script src="./js/script.js"></script>
 <script src="./js/calculos.js"></script>
-
+<script src="./js/discounts.js"></script>
 
 </html>
