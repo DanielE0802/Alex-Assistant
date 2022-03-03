@@ -40,7 +40,6 @@ function nextStep(currentStep, nextStep) {
 
     for (let i = 0; i < stepContainer.length; i++) {
         console.log(stepContainer[i].dataset.name)
-
         if (stepContainer[i].dataset.name === currentStep) {
             stepContainer[i].classList.add("disable")
         } else if (stepContainer[i].dataset.name === nextStep) {
@@ -54,7 +53,6 @@ function nextStep(currentStep, nextStep) {
         if (stepContainer[i].dataset.name == "geometry") {
             stepGeometry()
         }
-
     }
 }
 
@@ -66,7 +64,7 @@ function stepGeometry() {
     //         "nombre": "Rectangulo"
     //     }
     // ]
- 
+
     let geometryContainer = document.querySelector(".two-step.geometry")
 
     // dataStep.forEach(element => {
@@ -80,7 +78,3 @@ function stepGeometry() {
 }
 
 console.log(stepContainer)
-
-
-
-

@@ -1,11 +1,6 @@
-let precioOriginal = 120
-let descuento = 18
-
 function discountNormal(price, discount) {
     return (price * (100 - discount)) / 100
 }
-
-console.log(discountNormal(precioOriginal, descuento))
 
 // Coupons
 
@@ -39,8 +34,6 @@ function haveCouponDiscount (couponValue){
         return undefined
     } else {
         // Si funciona el cupón
-    
-        console.log("funciona")
         return userCoupon.discount
 
     }
@@ -58,6 +51,15 @@ function applyDiscountHaveCoupon(){
     resultProductValueCoupon.textContent= finalPrice
 }
 
+
+function applyNotCouponDiscount (){
+    let precioOriginal= document.getElementById("productValue")
+    let descuento = document.getElementById("productNotCouponDiscount")
+    let resultnotCoupon = document.getElementById("resultnotCoupon")
+
+    let precioFinal = discountNormal(precioOriginal.value , descuento.value)
+    resultnotCoupon.innerText= precioFinal
+}
 
 
 // Web
