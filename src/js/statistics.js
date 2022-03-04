@@ -68,6 +68,9 @@ function calculateAverageArithmetic() {
 }
 calculateAverageArithmetic()
 
+
+// Helpers
+
 function esPar(number) {
     return (number % 2 === 0 );
 }
